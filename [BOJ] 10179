@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main ()
+{
+    int Case,i;
+    double cost;
+    scanf("%d",&Case);
+    
+    for(i=0;i<Case;i++)
+    {
+       scanf("%lf",&cost);
+       printf("$%.2f\n",cost*0.8);
+    }
+
+    return 0;
+}
