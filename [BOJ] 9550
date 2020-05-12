@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main ()
+{
+    int TestCase,N,K,i,j,n,ablechildren=0;
+    scanf("%d",&TestCase);
+
+    for(i=0;i<TestCase;i++)
+    {
+        scanf("%d",&N); //K는 최소 먹어야 하는 사탕 수
+        scanf("%d",&K);
+
+        for(j=0;j<N;j++)
+        {
+            scanf("%d",&n);
+            ablechildren+=(n/K);
+        }
+        
+        printf("%d\n",ablechildren);
+        ablechildren=0;
+    }
+    return 0;    
+}
