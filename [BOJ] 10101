@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main ()
+{
+    int a,b,c,sum;
+    scanf("%d\n",&a);
+    scanf("%d\n",&b);
+    scanf("%d\n",&c);
+    
+    sum=a+b+c;
+    
+    if(a==60 && b==a && c==a)
+    {
+        printf("Equilateral\n");
+    }
+    else if(sum==180)
+    {
+        if(a==b || b==c || c==a)
+            printf("Isosceles\n");
+        else
+            printf("Scalene\n");
+    }
+    else
+        printf("Error\n");
+    
+    return 0;
+}
