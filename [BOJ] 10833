@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main ()
+{
+    int schoolNum,i=0;
+    int sum=0;
+    
+    scanf("%d",&schoolNum);
+    int SA[schoolNum][2];
+    
+    for(i=0;i<schoolNum;i++)
+        scanf("%d %d",&SA[i][0],&SA[i][1]);
+    
+    for(i=0;i<schoolNum;i++)
+        sum+=SA[i][1]%SA[i][0];
+    
+    printf("%d",sum);
+    return 0;
+}
