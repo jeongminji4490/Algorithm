@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main ()
+{
+    int testCase,i,j;
+    float pc[5][5];   
+    scanf("%d",&testCase);
+    float sum[testCase];
+    
+    pc[0][0]=350.34;
+    pc[1][0]=230.90;
+    pc[2][0]=190.55;
+    pc[3][0]=125.30;
+    pc[4][0]=180.90;
+    
+    for(i=0;i<testCase;i++)
+    {
+        scanf("%f %f %f %f %f",&pc[0][1],&pc[1][1],&pc[2][1],&pc[3][1],&pc[4][1]);
+
+        for(j=0;j<5;j++)
+          sum[i]+=pc[j][0]*pc[j][1];
+    }
+
+    for(i=0;i<testCase;i++)
+    printf("$%.2f\n",sum[i]);
+    
+    return 0;  
+}
