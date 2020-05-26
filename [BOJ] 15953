@@ -1,0 +1,56 @@
+   #include<stdio.h>
+
+   int main(){
+
+     int testCase,i,j,Num_2017,Num_2018;
+     int prize_2017,prize_2018;
+     //2017 prize//
+     scanf("%d",&testCase);
+
+     for(i=0;i<testCase;i++)
+     {
+       scanf("%d %d",&Num_2017,&Num_2018);
+
+       if(Num_2017==0 || Num_2017>21)
+       {
+         prize_2017=0;
+       }
+       else
+       {
+         if(Num_2017==1)
+         prize_2017=5000000;
+         else if(Num_2017<=3)
+         prize_2017=3000000;
+         else if(Num_2017<=6)
+         prize_2017=2000000;
+         else if(Num_2017<=10)
+         prize_2017=500000;
+         else if(Num_2017<=15)
+         prize_2017=300000;
+         else
+         prize_2017=100000;  
+       }
+
+       j=2;
+
+      if(Num_2018==0 || Num_2018>31)
+      {
+        prize_2018=0;
+      }
+      else
+      {
+        prize_2018=5120000;
+        
+        while(j<=Num_2018)
+        {
+          prize_2018=prize_2018/2;
+          j*=2;
+        }
+
+      }
+
+      printf("%d\n",prize_2017+prize_2018);
+
+      }
+      return 0;
+  }
