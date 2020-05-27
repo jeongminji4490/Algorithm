@@ -1,0 +1,41 @@
+ #include<stdio.h>
+
+   int main(){
+
+     int n[30];
+     int i=0,j=1,m=28; //j는 학번
+
+     for(i=0;i<28;i++)
+     {
+       scanf("%d",&n[i]);
+     }
+
+     while(j<=30)
+     {
+       for(i=0;i<30;i++)
+       {
+         if(i>=29)
+         {
+           n[m++]=j;
+           break;
+         }
+
+         if(j==n[i])
+         break;
+       }
+       j++;
+     }
+
+     if(n[28]<n[29])
+     {
+       printf("%d\n",n[28]);
+       printf("%d\n",n[29]);
+     }
+     else
+     {
+       printf("%d\n",n[29]);
+       printf("%d\n",n[28]);
+     }
+
+    return 0;
+  }
