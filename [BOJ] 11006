@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main ()
+{
+  int testCase,i,n,m; //n-모든 닭의 다리 수의 합,m-닭의 수
+  int u,t; //u-다리가 잘린 닭의 수, t-멀쩡한 닭의 수
+  
+  scanf("%d",&testCase);
+
+  for(i=0;i<testCase;i++)
+  {
+    scanf("%d %d",&n,&m);
+    u=2*m-n;
+    t=n-m;
+    printf("%d %d\n",u,t);
+  }
+
+  return 0;
+}
