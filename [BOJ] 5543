@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main ()
+{
+    int a,b,c,d,e,burgerMin,drinkMin;
+    
+    scanf("%d",&a);
+    scanf("%d",&b);
+    scanf("%d",&c);
+    scanf("%d",&d);
+    scanf("%d",&e);
+    
+    if(a<b && a<c)
+        burgerMin=a;
+    else if(b<a && b<c)
+        burgerMin=b;
+    else
+        burgerMin=c;
+    
+    if(d<e)
+        drinkMin=d;
+    else
+        drinkMin=e;
+    
+    printf("%d\n",burgerMin+drinkMin-50);
+    
+    return 0;
+}
