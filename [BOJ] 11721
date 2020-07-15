@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    String string;
+    Scanner sc=new Scanner(System.in);
+    String[] array_word;
+
+    string=sc.next();
+    array_word=string.split(""); //한 글자씩 끊어서 저장
+
+    for(int i=0;i<array_word.length;i++){
+
+      if(i%10==0 && i!=0)
+      System.out.println();
+
+      System.out.print(array_word[i]);
+    }
+  }
+}
