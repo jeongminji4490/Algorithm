@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    int[] t=new int[4]; //크기가 4인 배열 생성
+    int max=0;
+    int e,s; //e:내리는 사람 s:타는 사람
+    Scanner sc=new Scanner(System.in);
+
+    for(int i=0;i<4;i++){
+      e=sc.nextInt(); 
+      s=sc.nextInt(); 
+
+      if(e>0)
+      {
+        t[i-1]-=e; //내린 사람 전 역에서 탄 사람들 수에서 빼기
+        t[i]=t[i-1]+s; //타는 사람 이번 역에서 더하기 
+      }
+      else
+      t[i]+=s; //타는 사람 수 더하기
+
+      if(t[i]>max)
+      max=t[i];
+    }
+    System.out.println(max);
+  }
+}
