@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    int work,time,count=0,sum=0;
+    Scanner sc=new Scanner(System.in);
+    work=sc.nextInt();
+    time=sc.nextInt();
+
+    for(int i=0;i<work;i++){
+      sum+=sc.nextInt();
+
+      if(sum>time)
+      break;
+
+      count++;
+    }
+
+    System.out.println(count);
+  }
+}
