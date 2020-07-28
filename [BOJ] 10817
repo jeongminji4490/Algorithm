@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    int a,b,c;
+    Scanner sc=new Scanner(System.in);
+
+    //2번째로 큰 거 출력//
+    a=sc.nextInt(); //30
+    b=sc.nextInt(); //15
+    c=sc.nextInt(); //20
+
+    if(a>b && a>c)
+    {
+      if(b>c)
+      System.out.println(b);
+      else
+      System.out.println(c);
+    }
+    else if(b>a && b>c)
+    {
+      if(a>c)
+      System.out.println(a);
+      else
+      System.out.println(c);
+    }
+    else
+    {
+      if(a>b)
+      System.out.println(a);
+      else
+      System.out.println(b);
+    }
+  }
+}
