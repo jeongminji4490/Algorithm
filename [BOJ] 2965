@@ -8,10 +8,9 @@ public class Main{
     a=sc.nextInt();
     b=sc.nextInt();
     c=sc.nextInt();
-
-    if(b-a-1>c-b-1) //두 개중 길이가 더 긴 것을 고르면 캥거루의 최대 이동 횟수를 구할 수 있음
-    System.out.println(b-a-1);
-    else
-    System.out.println(c-b-1);
+      
+    //두 개중 길이가 더 긴 것을 고르면 캥거루의 최대 이동 횟수를 구할 수 있음
+    //Math.max(a,b)/Max.min(a,b)->a,b중에 최댓값/최솟값 구하기
+    System.out.println(Math.max(b-a-1,c-b-1));
   }
 }
