@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    int testCase,maxPrize=0,prize=0;
+
+    Scanner sc=new Scanner(System.in);
+    testCase=sc.nextInt();
+    int[][] n=new int[testCase][3];
+
+    //사람 수만큼 주사위의 눈 입력//
+    for(int i=0;i<testCase;i++){
+      for(int j=0;j<3;j++){
+        n[i][j]=sc.nextInt();
+      }
+      //세개가 다 같은 눈이 나오면//
+      if(n[i][0]==n[i][1] && n[i][1]==n[i][2])
+      prize=10000+n[i][0]*1000;
+      else if(n[i][0]==n[i][1] || n[i][1]==n[i][2] || n[i][2]==n[i][0])
+      {
+        if(n[i][0]==n[i][1])
+        prize=1000+n[i][0]*100;
+        else if(n[i][1]==n[i][2])
+        prize=1000+n[i][1]*100;
+        else
+        prize=1000+n[i][2]*100;
+      }
+      else
+      {
+        if(n[i][0]>n[i][1] && n[i][0]>n[i][2])
+        prize=100*n[i][0];
+        else if(n[i][1]>n[i][0] && n[i][1]>n[i][2])
+        prize=100*n[i][1];
+        else
+        prize=100*n[i][2];
+      }
+
+      if(prize>maxPrize)
+      maxPrize=prize;
+    }
+    System.out.println(maxPrize);
+  }
+}
