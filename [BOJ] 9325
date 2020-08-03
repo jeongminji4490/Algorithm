@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    int testCase,carPrice,opNum,totalPrice=0;
+    Scanner sc=new Scanner(System.in);
+    testCase=sc.nextInt();
+
+    for(int i=0;i<testCase;i++){
+      carPrice=sc.nextInt(); //자동차 가격 입력
+      totalPrice+=carPrice;
+
+      opNum=sc.nextInt(); //옵션의 개수 입력
+      int[][] opList=new int[opNum][2];
+
+      for(int j=0;j<opNum;j++){
+        opList[j][0]=sc.nextInt(); //특정 옵션의 개수
+        opList[j][1]=sc.nextInt(); //특정 옵션의 가격
+        totalPrice+=opList[j][0]*opList[j][1];
+      }
+      System.out.println(totalPrice);
+      totalPrice=0; //총 금액 초기화
+    }
+  }
+}
