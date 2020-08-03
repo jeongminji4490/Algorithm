@@ -1,0 +1,19 @@
+import java.util.Scanner;
+//그리디 알고리즘//
+class Main {
+  public static void main(String[] args) {
+    int cost,coinNum=0;
+    int[] coinArr={500,100,50,10,5,1};
+    Scanner sc=new Scanner(System.in);
+    cost=sc.nextInt();
+    cost=1000-cost;
+
+    for(int i=0;i<6;i++){
+      if(cost/coinArr[i]>0){
+        coinNum+=cost/coinArr[i];
+        cost=cost%coinArr[i];
+      }
+    }
+    System.out.println(coinNum);
+  }  
+}
