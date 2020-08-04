@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main ()
+{
+  char chess[8][8]; //8X8 체스판
+  int i,j,FNum=0;
+
+  for(i=0;i<8;i++)
+  {
+    for(j=0;j<8;j++)
+    {
+      scanf(" %c",&chess[i][j]);
+
+      if((i+j)%2==0) 
+      {
+        if(chess[i][j]=='F')
+        FNum+=1;
+      }
+    }
+  }
+  printf("%d",FNum);
+
+  return 0;
+}
