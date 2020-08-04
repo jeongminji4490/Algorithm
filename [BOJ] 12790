@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+
+    int characterNum,finalPower; //캐릭터 수,전투력
+    int hp,mp,ofPower,dfPower;
+    int[] level=new int[8];
+    Scanner sc=new Scanner(System.in);
+    characterNum=sc.nextInt(); 
+    //처음 네 개의 정수는 각각 캐릭터의 기본 HP, MP, 공격력, 방어력, 다음 네 개의 정수는 각각 캐릭터의 장비에 의해 증감되는 HP, MP, 공격력, 방어력
+
+    for(int i=0;i<characterNum;i++){
+      for(int j=0;j<8;j++){
+        level[j]=sc.nextInt();
+      }
+  
+      hp=level[0]+level[4];
+      if(hp<1)
+      hp=1;
+
+      mp=level[1]+level[5];
+      if(mp<1)
+      mp=1;
+
+      ofPower=level[2]+level[6];
+      if(ofPower<0)
+      ofPower=0;
+
+      dfPower=level[3]+level[7]; 
+
+      finalPower=hp+5*mp+2*ofPower+2*dfPower;
+
+      System.out.println(finalPower);
+    }
+  }
+}
